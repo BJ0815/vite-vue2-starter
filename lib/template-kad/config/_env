@@ -1,0 +1,5 @@
+BASE_URL=/<%= branchName %>
+PROJECT_NAME=<%= branchName %>
+
+VUE_APP_CUSTOMER_ID=<%= cid %>
+VUE_APP_EVENT_ID=<%= branchName %>
