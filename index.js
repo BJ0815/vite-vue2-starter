@@ -8,32 +8,32 @@ const cli = require('cac')();
 const file = require('./lib/file');
 const inquirer = require('./lib/inquirer');
 const project = require('./lib/project')
+const github = require('./lib/github')
+
 const cwd = process.cwd()
 const template = 'kad'
 
 clear()
 
-// if .git exists, and process.exit()
-// if (file.directoryExists('.git')) {
-//   console.log(chalk.red('Already a Git repository!'));
-//   process.exit();
-// }
-
 // ask question by inquirer
+// TODO: 能夠選擇不同模板 / 不同模板又各自的流程
+// TODO: 建立選擇模板的問答
+// TODO: 各自模板流程模組化
+// TODO: 推上 github origin
 const run = async () => {
   try {
     cli
     .command("create-app")
     .action(async () => {
       const result = await inquirer.askProjectInfo()
-      console.log(result)
        // user choice associated with prompts
       const { branchName, jiraIssueKey, cid } = result
       const root = path.join(cwd)
       // create project by answers
-      project.init(root, {template, branchName, jiraIssueKey, cid})
+      await project.init(root, template, { branchName, jiraIssueKey, cid})
       // create git branch<deploy> and push to remote
-      // create git branch<develop>
+      await github.createBranchByKadStrategy(branchName)
+      console.log(chalk.green(`Good luck for development`))
     });
 
     cli.help();

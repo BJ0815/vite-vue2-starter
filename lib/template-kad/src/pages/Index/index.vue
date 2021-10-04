@@ -1,6 +1,6 @@
 <template>
   <div class="Index">
-    <h1><%= projectName %></h1>
+    <h1><%= branchName %></h1>
   </div>
 </template>
 
