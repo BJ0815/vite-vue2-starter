@@ -1,0 +1,25 @@
+{
+	"name": "events.104.com.tw",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "events.104.com.tw",
+	"extensions": [
+	  // "kisstkondoros.vscode-codemetrics",
+	  "streetsidesoftware.code-spell-checker",
+	  // "octref.vetur",
+	  "dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"teamchilla.blueprint",
+		"hex-ci.stylelint-plus",
+		"christian-kohler.path-intellisense",
+		"johnsoncodehk.volar"
+	],
+	"settings": {
+	  "terminal.integrated.shell.linux": "/bin/bash",
+	  "eslint.format.enable": true,
+	  "editor.codeActionsOnSave": {
+		  "source.fixAll": true
+	  }
+	},
+	"workspaceFolder": "/usr/src/app"
+  }
+  

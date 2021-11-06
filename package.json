@@ -1,0 +1,79 @@
+{
+  "name": "@104z-kad/104_20210718",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "npm run lint:script && npm run lint:style",
+    "lint:script": "eslint --fix --ext .js,.vue src",
+    "lint:style": "stylelint src/**/*.{vue,scss} --fix",
+    "reset": "rm -rf dist && git clean -df && npm ci",
+    "serve": "vite --open",
+    "preview": "vite preview --open --port 8080",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "detect-browser": "^5.2.0",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "vue": "^2.6.11",
+    "vue-meta": "^2.4.0",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@104corp/stylelint-config-104z": "github:104corp/stylelint-config-104z#v1.0.0",
+    "@babel/eslint-parser": "^7.16.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "@vitejs/plugin-legacy": "^1.4.4",
+    "@vue/compiler-sfc": "^3.1.5",
+    "@vue/composition-api": "^1.0.0-rc.6",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "eslint": "^8.0.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.19.1",
+    "lint-staged": "^11.2.6",
+    "prettier": "2.2.1",
+    "sass": "^1.26.5",
+    "vite": "^2.4.2",
+    "vite-plugin-vue2": "^1.7.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "eslintIgnore": [
+    ".vscode",
+    "!.*",
+    "node_modules",
+    "template"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.vue": [
+      "npm run lint",
+      "git add"
+    ],
+    "*.scss": [
+      "npm run lint:style",
+      "git add"
+    ],
+    "*.{js,ts}": [
+      "npm run lint:script",
+      "git add"
+    ]
+  },
+  "stylelint": {
+    "extends": "./config/lint/stylelint.config.js",
+    "ignoreFiles": [
+      ".vscode/**",
+      "dist/**",
+      "node_modules/**"
+    ]
+  }
+}

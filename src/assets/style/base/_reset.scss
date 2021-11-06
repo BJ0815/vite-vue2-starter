@@ -1,0 +1,79 @@
+/* some comment */
+@import 'node_modules/normalize.css/normalize.css';
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// ------> 表單元素 reset
+// input,
+// select {
+//   margin: 0;
+//   border: none;
+//   background-color: transparent;
+//   outline: none;
+//   appearance: none;
+// }
+
+// select::-ms-expand {
+//   display: none;
+// }
+
+// button {
+//   border: none;
+//   background-color: transparent;
+//   outline: none;
+//   appearance: none;
+// }

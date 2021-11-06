@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "kisstkondoros.vscode-codemetrics",
+	  "streetsidesoftware.code-spell-checker",
+	  "octref.vetur",
+	  "dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"teamchilla.blueprint",
+		"hex-ci.stylelint-plus",
+		"christian-kohler.path-intellisense"
+  ]
+}

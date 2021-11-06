@@ -1,0 +1,30 @@
+{
+  "Vue SFC template": {
+    "scope": "vue",
+    "prefix": "sfc",
+    "body": [
+      "<template>",
+      "\t<div>",
+      "\t</div>",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      "\tname: '$0',",
+      "\tdata () {",
+      "\t\treturn {",
+      "\t\t}",
+      "\t}",
+      "}",
+			"</script>",
+			"",
+      "<style lang=\"scss\">",
+      "",
+      "// xxl | xl | lg | md | sm",
+      "// @include screen (xl) {}",
+      "</style>",
+      ""
+    ],
+    "description": "Vue SFC template"
+  }
+}
