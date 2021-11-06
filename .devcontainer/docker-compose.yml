@@ -11,24 +11,6 @@ services:
     ports:
       - 3000:3000
     tty: true
-    networks:
-      - webnet
-  #   depends_on:
-  #     - nginx
-  # nginx:
-  #   image: nginx:1.18
-  #   container_name: "104z-nginx"
-  #   volumes:
-  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
-  #     - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-  #     - ./certificate/wildcard.104-dev.com.tw.pem:/etc/nginx/wildcard.104-dev.com.tw.pem
-  #     - ./certificate/wildcard.104-dev.com.tw-key.pem:/etc/nginx/wildcard.104-dev.com.tw-key.pem
-  #   networks:
-  #     - webnet
-  #   ports:
-  #     - 80:80
-  #     - 443:443
-networks:
-  webnet:
+
 volumes:
   nodemodules:

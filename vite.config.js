@@ -20,7 +20,7 @@ export default ({ mode }) => {
     base: process.env.VITE_BASE_URL || "/",
     envDir: path.resolve(__dirname, "config"),
     server: {
-      port: 8080,
+      port: 3000,
     },
     resolve: {
       alias: [
