@@ -1,24 +1,23 @@
 <template>
   <div class="Index">
-    <h1>{{ msg }}</h1>
+    <h1 class="text-36 text-gray-900">{{ msg }}</h1>
   </div>
 </template>
 
 <script>
-export default {
+import { ref, defineComponent } from "@vue/composition-api";
+export default defineComponent({
   name: "Index",
-  data() {
-    return {
-      msg: "104_20210718",
-    };
+  setup() {
+    const msg = ref("Hello world");
+
+    return { msg };
   },
-};
+});
 </script>
 
 <style lang="scss">
 .Index {
-  // re
-  color: #000;
 }
 
 // xxl | xl | lg | md | sm

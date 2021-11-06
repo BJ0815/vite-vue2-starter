@@ -1,6 +1,10 @@
 @forward './base/reset';
 @forward './animation/v-transition';
 @use './base/font-face';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '~tailwindcss/common/fonts/font.css';
 
 body {
   min-width: 320px;

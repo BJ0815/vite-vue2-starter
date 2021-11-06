@@ -7,7 +7,7 @@
     "lint:script": "eslint --fix --ext .js,.vue src",
     "lint:style": "stylelint src/**/*.{vue,scss} --fix",
     "reset": "rm -rf dist && git clean -df && npm ci",
-    "serve": "vite --open",
+    "serve": "vite",
     "preview": "vite preview --open --port 8080",
     "build": "vite build"
   },
@@ -38,7 +38,8 @@
     "sass": "^1.26.5",
     "vite": "^2.4.2",
     "vite-plugin-vue2": "^1.7.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "tailwindcss": "git+https://github.com/104corp/tailwindcss.git#v1.3.0"
   },
   "browserslist": [
     "> 1%",
